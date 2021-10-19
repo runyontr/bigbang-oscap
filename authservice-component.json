@@ -31,6 +31,14 @@
         "uuid": "E70A5057-3BA4-4E62-8C74-ED19122BBA9E",
         "type": "software",
         "title": "Authservice",
+        "set-parameters": [
+          {
+            "param-id": "2_prm_1",
+            "values": [
+              "Parameter from Component"
+            ]
+          }
+        ],
         "description": "an implementation of thee Envoy External Authorization focused on handling AuthN/AuthZ \nfor Istio and Kubernetes.\n",
         "purpose": "Provides authn/authz capabilites to applications via Istio Service Mesh",
         "responsible-roles": [
