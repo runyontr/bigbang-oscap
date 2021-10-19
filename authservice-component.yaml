@@ -1,0 +1,57 @@
+---
+component-definition:
+      # these uuids seem annoying to generate.
+  uuid: 96D90418-4CF5-40F1-9AB3-777F81B39C7E
+  metadata: 
+    title: Authservice
+    last-modified: '2021-10-19T12:00:00Z'
+    version: 20211019
+    oscal-version: 1.0.0
+    roles:
+    - id: provider
+      title: Provider
+    parties:
+      # Should be consistent across all of the packages, but where is ground truth?
+    - uuid: 72134592-08C2-4A77-ABAD-C880F109367A 
+      type: organization
+      name: Platform One
+      links:
+      - href: <https://p1.dso.mil>
+        rel: website
+  components:
+  - uuid: E70A5057-3BA4-4E62-8C74-ED19122BBA9E
+    type: software
+    title: Authservice
+    description: |
+      an implementation of thee Envoy External Authorization focused on handling AuthN/AuthZ 
+      for Istio and Kubernetes.
+    purpose: Provides authn/authz capabilites to applications via Istio Service Mesh
+    responsible-roles:
+    - role-id: provider
+      party-uuid: 72134592-08C2-4A77-ABAD-C880F109367A # matches parties entry for p1
+    control-implementations:
+    - uuid: 5108E5FC-C45F-477B-A542-9C5611A92485
+      source: <https://github.com/usnistgov/oscal-content/blob/master/nist.gov/SP800-53/rev5/json/NIST_SP-800-HIGH-baseline_profile.json>
+      description: >-
+        Controls inherited by configuration of Bigbang using Authservice
+      implemented-requirements:
+      - uuid: C6F6C8F4-37A4-4224-8BFD-C60860E56345
+        control-id: ac-2
+        description: >-
+          Authservice validates requests in the Istio service mesh have a token from the configured Identity provider
+          in the headers.  If a request is missing the header token from the identity provider, it will redirect the
+           request to the Identity Provider to obtain a token. 
+          
+          Each application behind authservice can be configured with a unique client_id and client_secret, allowing 
+          access management of the application to be completely inhertied by the identity provider.
+      - uuid: 08D5E163-E125-4D47-BCE9-42EAE6868F66
+        control-id: ac-3
+        description: >-
+          The Istio `RequestAuthorizatoin` policies `jwt-authn`, `authservice` and `jwt-authz` provided by the Authservice
+          Big Bang Helm chart ensure that network traffic has a token, has a token from the identity provider, 
+          and was approved by Authservice.  If any of those are not true, the Istio dataplane will block traffic to the
+          destintation requested.
+      - uuid: 6B22B7C8-2446-4BA0-88E3-C695CF2CD08E
+        control-id: ac-4 
+        description:
+          # this is Istio and Kubernetes NetworkPolicies
