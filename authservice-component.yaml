@@ -31,7 +31,7 @@ component-definition:
       party-uuid: 72134592-08C2-4A77-ABAD-C880F109367A # matches parties entry for p1
     control-implementations:
     - uuid: 5108E5FC-C45F-477B-A542-9C5611A92485
-      source: https://github.com/usnistgov/oscal-content/blob/master/nist.gov/SP800-53/rev5/json/NIST_SP-800-HIGH-baseline_profile.json
+      source: https://raw.githubusercontent.com/usnistgov/oscal-content/master/nist.gov/SP800-53/rev5/json/NIST_SP-800-53_rev5_HIGH-baseline_profile.json
       description: >-
         Controls inherited by configuration of Bigbang using Authservice
       implemented-requirements:
