@@ -42,7 +42,7 @@
         "control-implementations": [
           {
             "uuid": "5108E5FC-C45F-477B-A542-9C5611A92485",
-            "source": "<https://github.com/usnistgov/oscal-content/blob/master/nist.gov/SP800-53/rev5/json/NIST_SP-800-HIGH-baseline_profile.json>",
+            "source": "https://github.com/usnistgov/oscal-content/blob/master/nist.gov/SP800-53/rev5/json/NIST_SP-800-HIGH-baseline_profile.json",
             "description": "Controls inherited by configuration of Bigbang using Authservice",
             "implemented-requirements": [
               {
