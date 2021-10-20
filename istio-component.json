@@ -1,0 +1,84 @@
+{
+  "component-definition": {
+    "uuid": "405365A0-F12B-418B-BC90-2336C3BCC84B",
+    "metadata": {
+      "title": "Istio",
+      "last-modified": "2021-10-19T12:00:00Z",
+      "version": 20211019,
+      "oscal-version": "1.0.0",
+      "roles": [
+        {
+          "id": "provider",
+          "title": "Provider"
+        }
+      ],
+      "parties": [
+        {
+          "uuid": "72134592-08C2-4A77-ABAD-C880F109367A",
+          "type": "organization",
+          "name": "Platform One",
+          "links": [
+            {
+              "href": "<https://p1.dso.mil>",
+              "rel": "website"
+            }
+          ]
+        }
+      ]
+    },
+    "components": [
+      {
+        "uuid": "405365A0-F12B-418B-BC90-2336C3BCC84B",
+        "type": "software",
+        "title": "Istio",
+        "description": "Istio Service Mesh implemented in Big Bang\n",
+        "purpose": "Provides observibility and traffic management for",
+        "responsible-roles": [
+          {
+            "role-id": "provider",
+            "party-uuid": "72134592-08C2-4A77-ABAD-C880F109367A"
+          }
+        ],
+        "control-implementations": [
+          {
+            "uuid": "5108E5FC-C45F-477B-A542-9C5611A92485",
+            "source": "https://raw.githubusercontent.com/usnistgov/oscal-content/master/nist.gov/SP800-53/rev5/json/NIST_SP-800-53_rev5_catalog.json",
+            "description": "Controls inherited by configuration of Bigbang using Istio",
+            "implemented-requirements": [
+              {
+                "uuid": "6B22B7C8-2446-4BA0-88E3-C695CF2CD08E",
+                "control-id": "ac-4",
+                "description": "Istio provides network isolation between components in the Kubernetes cluster based on the SPIFFE/SPIRE of the component and how they apply to the AuthorizationRules defined in the system. "
+              },
+              {
+                "uuid": "6B22B7C8-2446-4BA0-88E3-C695CF2CD08E",
+                "control-id": "ac-6",
+                "description": "Istio provides least privilege between components by having a granular view of the  identities of workloads in the cluster and being able to apply granular  AuthorizationPolicies to those workloads."
+              },
+              {
+                "uuid": "B8201E9C-0012-4C5A-AB4D-7F80F5C0853D",
+                "control-id": "ac-20",
+                "description": "Istio provides the ability to prevent network connectivity to external components by the use of authorization policies and service meshy things."
+              },
+              {
+                "uuid": "0AEF15AD-0562-449E-9695-0EA826A7813D",
+                "control-id": "ac-23",
+                "description": "Data Mining protection is available via istio by limiting the number of concurrent  connections by a user.  Additionally, the granular control of AuthorizationRules by istio on a path basis allow for control of how data can egress."
+              },
+              {
+                "uuid": "6CB10F6B-EB26-4525-9B9F-BF63583E363D",
+                "control-id": "ac-24",
+                "description": "Access Control decision is made by the Istio sidecar to determine if  AuthorizationPolicies apply to the requested traffic."
+              },
+              {
+                "uuid": "D7CE4AB9-09D7-48D8-BC2E-A28422B671C4",
+                "control-id": "ac-25",
+                "description": "Istio can be configured to ensure that only endpoints registered in the ServiceMesh are accessable by workloads.  Istio configurations in the istio-system namespace get applied globally to the cluster and provide a central configuration for acceess management"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
