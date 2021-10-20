@@ -48,6 +48,18 @@ component-definition:
           
           Each application behind authservice can be configured with a unique client_id and client_secret, allowing 
           access management of the application to be completely inhertied by the identity provider.
+      - uuid: 6551B643-7958-4615-81D4-FBBB2E42B212
+        control-id: ac-2.1
+        description: >-
+          Account management can be offloaded to the Identity Provider
+      - uuid: 4493AA67-2B74-47BB-95F7-450CC243BF04
+        control-id: ac-2.2
+        description: >-
+          Accounts can be removed and disabled from the Identity provider
+      - uuid: D8517E02-E5CE-453C-8750-7183E77A95B7
+        control-id: ac-2.3
+        description: >-
+          Accoutns can be disabled via the Identity Provider
       - uuid: 08D5E163-E125-4D47-BCE9-42EAE6868F66
         control-id: ac-3
         description: >-
