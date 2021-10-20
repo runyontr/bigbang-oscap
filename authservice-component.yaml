@@ -56,6 +56,69 @@ component-definition:
           and was approved by Authservice.  If any of those are not true, the Istio dataplane will block traffic to the
           destintation requested.
       - uuid: 6B22B7C8-2446-4BA0-88E3-C695CF2CD08E
-        control-id: ac-4 
-        description:
-          # this is Istio and Kubernetes NetworkPolicies
+        control-id: ac-6
+        description: >-
+          Authservice ensures that least privilege is used when accessing the system by allowing the Identity
+          provider to provide the ac-6 control.
+      - uuid: 6282750E-8519-47B7-AB85-C2CADA23504B
+        control-id: ac-7
+        description: >-
+          The use of Authservice enables AC-7 to be inherited by the Identity Provider because logins to the 
+          application are controled by the Identity Provider and the application cannot be accessed without
+          a valid login and authorization check by the Identity Provider.
+      - uuid: 83E3FD08-F4F4-4CDF-95EC-5A314D920D3E
+        control-id: ac-8
+        description: >-
+          The use of Authservice enables AC-8 to be inherited by the Identity Provider because logins to the 
+          application are controled by the Identity Provider and the application cannot be accessed without
+          a valid login and authorization check by the Identity Provider.
+      - uuid: 03B8D342-6DFE-4233-9002-196C23C5229B
+        control-id: ac-9
+        description: >-
+          The use of Authservice enables AC-9 to be inherited by the Identity Provider because logins to the 
+          application are controled by the Identity Provider and the application cannot be accessed without
+          a valid login and authorization check by the Identity Provider.
+      - uuid: 03B8D342-6DFE-4233-9002-196C23C5229B
+        control-id: ac-10
+        description: >-
+          The use of Authservice enables AC-9 to be inherited by the Identity Provider because logins to the 
+          application are controled by the Identity Provider and the application cannot be accessed without
+          a valid login and authorization check by the Identity Provider.
+      - uuid: A0546272-BEF7-402A-AD1A-BE13C7CA43A3
+        control-id: ac-11
+        description: >-
+          Need to see if Keycloak has this built in and if we login via a CaC,and then remove the cac 
+          if the session to our application is suspended.
+      - uuid: 03B8D342-6DFE-4233-9002-196C23C5229B
+        control-id: ac-12
+        description: >-
+          The use of Authservice enables AC-12 to be inherited by the Identity Provider because logins to the 
+          application are controled by the Identity Provider and the application cannot be accessed without
+          a valid login and authorization check by the Identity Provider.
+      - uuid: 03B8D342-6DFE-4233-9002-196C23C5229B
+        control-id: ac-13
+        description: >-
+          The use of Authservice enables AC-13 to be inherited by the Identity Provider because logins to the 
+          application are controled by the Identity Provider and the application cannot be accessed without
+          a valid login and authorization check by the Identity Provider.
+      - uuid: 03B8D342-6DFE-4233-9002-196C23C5229B
+        control-id: ac-16
+        description: >-
+          The use of Authservice enables AC-13 to be inherited by the Identity Provider because logins to the 
+          application are controled by the Identity Provider and the application cannot be accessed without
+          a valid login and authorization check by the Identity Provider.  Upon authorization, group 
+          membership can be provided for the logged in subject to enable the application to make 
+          determinations on subjects approval for using the application and seeing restricted objects.
+      - uuid: 8488D879-062B-4E90-A1C6-7B4F0D53E774
+        control-id: ac-24
+        description: >-
+          The authservice AuthorizationPolicy is used by Istio to make Access Control Decisions.  This service
+          provides a critical determination for workloads protected by Authservice to ensure that only
+          authorized subjects are allowed to access the workload.
+      - uuid: D7CE4AB9-09D7-48D8-BC2E-A28422B671C4
+        control-id: ac-25
+        description: >-
+          Authservice configured at the gateway applies to all traffic ingressing into the system via the gateway.
+
+
+          
