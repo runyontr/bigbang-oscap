@@ -6,12 +6,6 @@
       "last-modified": "2021-10-19T12:00:00Z",
       "version": 20211019,
       "oscal-version": "1.0.0",
-      "roles": [
-        {
-          "id": "provider",
-          "title": "Provider"
-        }
-      ],
       "parties": [
         {
           "uuid": "72134592-08C2-4A77-ABAD-C880F109367A",
@@ -199,25 +193,6 @@
                 "uuid": "C9C67A58-CBA4-4F9D-92A6-B73068C7F3AD",
                 "control-id": "ia-12.5",
                 "description": "Authservice does not manage authenticators, they are managed by the IdP. This control can then be inherited from the IdP. "
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "uuid": "F45A4294-A906-4743-861E-4B36A5355BA4",
-        "type": "service",
-        "title": "authservice",
-        "protocols": [
-          {
-            "uuid": "B058892D-7AC1-4054-8CD0-D8B2A1192B12",
-            "name": "authservice",
-            "title": "Authservice GRCP port",
-            "port-ranges": [
-              {
-                "start": 20001,
-                "end": 20001,
-                "transport": "GRPC"
               }
             ]
           }
