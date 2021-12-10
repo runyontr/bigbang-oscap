@@ -202,6 +202,34 @@
           ]
         }
       ]
+    },
+    "control-implementation": {
+      "description": "This is the control implementation for the system.",
+      "implemented-requirements": [
+        {
+          "uuid": "3EBBAB88-3247-44EE-8009-66DF265BEA00",
+          "control-id": "ra-5",
+          "statements": [
+            {
+              "statement-id": "ra-5_smt.a",
+              "uuid": "2CCE1C1D-6109-484D-9211-6119BD4EFFD5",
+              "by-components": [
+                {
+                  "component-uuid": "98A726F0-4B28-4E1C-A43D-FBFDA38EF63D",
+                  "uuid": "DEF74CD6-86D8-4DE3-91C1-9A7F684696CC",
+                  "description": "Twistlock installed on system.",
+                  "set-parameters": [
+                    {
+                      "param-id": "ra-5_prm_1",
+                      "values": "hourly"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
     }
   }
 }

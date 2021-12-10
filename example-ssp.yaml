@@ -121,9 +121,34 @@ system-security-plan:
         implemented-components:
           - component-uuid: 98A726F0-4B28-4E1C-A43D-FBFDA38EF63D # prisma
           - component-uuid: 96D90418-4CF5-40F1-9AB3-777F81B39C7E # authservice
-  # control-implementation:
-  #   description: This is the control implementation for the system.
-  #   implemented-requirements:
+  control-implementation:
+    description: This is the control implementation for the system.
+    implemented-requirements:
+    - uuid: 3EBBAB88-3247-44EE-8009-66DF265BEA00
+      control-id: ra-5
+      statements:
+      - statement-id: ra-5_smt.a
+        uuid: 2CCE1C1D-6109-484D-9211-6119BD4EFFD5
+        by-components:
+          - component-uuid: 98A726F0-4B28-4E1C-A43D-FBFDA38EF63D
+            uuid: DEF74CD6-86D8-4DE3-91C1-9A7F684696CC
+            description: >-
+              Twistlock installed on system.
+            set-parameters:
+              - param-id: ra-5_prm_1
+                values: "hourly"
+      # - statement-id: ra-5_smt.b
+      #   uuid: 2B66DB60-12E9-4FFA-B024-6F5E6A2ECFDA
+      # - statement-id: ra-5_smt.c
+      #   uuid: CF762AD3-A0F3-4319-A18F-FB1E3A49A969
+      # - statement-id: ra-5_smt.d
+      #   uuid: A189DA84-5653-477D-825A-34CF308ABB2F
+      # - statement-id: ra-5_smt.e
+      #   uuid: 4DC792C2-01A4-47DA-BB20-4861A7D0C7AA
+      # - statement-id: ra-5_smt.f
+      #   uuid: B16B675A-F5EE-44C4-A26A-A53A64AF0FC7
+        
+        
   #     - uuid: aaadb3ff-6ae8-4332-92db-211468c52af2
   #       control-id: au-1
   #       statements:
