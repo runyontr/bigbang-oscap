@@ -25,7 +25,7 @@
         "uuid": "850AC4DA-604C-48A2-94F6-C873BA8B4DEB",
         "type": "software",
         "title": "Prisma Cloud Compute (PCC) AKA Twistlock",
-        "description": "risma™ Cloud Compute Edition delivers cloud workload protection (CWPP) for modern enterprises, providing holistic protection across hosts, containers, and serverless deployments in any cloud, throughout the application lifecycle. Prisma Cloud Compute Edition is cloud native and API-enabled, protecting all your workloads regardless of their underlying compute technology or the cloud in which they run.\n",
+        "description": "Prisma Cloud Compute Edition delivers cloud workload protection (CWPP) for modern enterprises, providing holistic protection across hosts, containers, and serverless deployments in any cloud, throughout the application lifecycle. Prisma Cloud Compute Edition is cloud native and API-enabled, protecting all your workloads regardless of their underlying compute technology or the cloud in which they run.\n",
         "purpose": "Runtime Security",
         "responsible-roles": [
           {
@@ -231,7 +231,7 @@
               },
               {
                 "uuid": "3F7DA4E8-B162-46FB-86B7-6CD6FD919404",
-                "control-id": "sr.9",
+                "control-id": "sr-9",
                 "description": "Prisma identifies when running image SHA does not match upstream repository source"
               },
               {

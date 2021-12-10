@@ -18,7 +18,7 @@ component-definition:
     type: software
     title: Prisma Cloud Compute (PCC) AKA Twistlock
     description: |
-      risma™ Cloud Compute Edition delivers cloud workload protection (CWPP) for modern enterprises, providing holistic protection across hosts, containers, and serverless deployments in any cloud, throughout the application lifecycle. Prisma Cloud Compute Edition is cloud native and API-enabled, protecting all your workloads regardless of their underlying compute technology or the cloud in which they run.
+      Prisma Cloud Compute Edition delivers cloud workload protection (CWPP) for modern enterprises, providing holistic protection across hosts, containers, and serverless deployments in any cloud, throughout the application lifecycle. Prisma Cloud Compute Edition is cloud native and API-enabled, protecting all your workloads regardless of their underlying compute technology or the cloud in which they run.
     purpose: Runtime Security
     responsible-roles:
     - role-id: provider
@@ -191,7 +191,7 @@ component-definition:
         description: >-
           Alerts can be configured for Prisma events.
       - uuid: 3F7DA4E8-B162-46FB-86B7-6CD6FD919404
-        control-id: sr.9
+        control-id: sr-9
         description: >-
           Prisma identifies when running image SHA does not match upstream repository source
       - uuid: B9ECF4C5-267D-420A-A062-12E7AED175C0
