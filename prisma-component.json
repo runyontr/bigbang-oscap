@@ -1,0 +1,248 @@
+{
+  "component-definition": {
+    "uuid": "98A726F0-4B28-4E1C-A43D-FBFDA38EF63D",
+    "metadata": {
+      "title": "Prisma Cloud Compute AKA Twistlock",
+      "last-modified": "2021-10-19T12:00:00Z",
+      "version": 20211019,
+      "oscal-version": "1.0.0",
+      "parties": [
+        {
+          "uuid": "72134592-08C2-4A77-ABAD-C880F109367A",
+          "type": "organization",
+          "name": "Platform One",
+          "links": [
+            {
+              "href": "<https://p1.dso.mil>",
+              "rel": "website"
+            }
+          ]
+        }
+      ]
+    },
+    "components": [
+      {
+        "uuid": "850AC4DA-604C-48A2-94F6-C873BA8B4DEB",
+        "type": "software",
+        "title": "Prisma Cloud Compute (PCC) AKA Twistlock",
+        "description": "risma™ Cloud Compute Edition delivers cloud workload protection (CWPP) for modern enterprises, providing holistic protection across hosts, containers, and serverless deployments in any cloud, throughout the application lifecycle. Prisma Cloud Compute Edition is cloud native and API-enabled, protecting all your workloads regardless of their underlying compute technology or the cloud in which they run.\n",
+        "purpose": "Runtime Security",
+        "responsible-roles": [
+          {
+            "role-id": "provider",
+            "party-uuid": "72134592-08C2-4A77-ABAD-C880F109367A"
+          }
+        ],
+        "control-implementations": [
+          {
+            "uuid": "B95B4604-A5B5-4224-A99F-49085B0A764B",
+            "source": "https://raw.githubusercontent.com/usnistgov/oscal-content/master/nist.gov/SP800-53/rev5/json/NIST_SP-800-53_rev5_catalog.json",
+            "description": "Controls implemented by PCC for inheritance by applications",
+            "implemented-requirements": [
+              {
+                "uuid": null,
+                "control-id": "ac-2.12",
+                "description": "PCC can be used to alert on suspcicious runtime behaviour"
+              },
+              {
+                "uuid": "73A63355-F6DC-41A9-B0B4-97F11528A46D",
+                "control-id": "au-2",
+                "description": "Prisma logs found vulnerabilities, compliance violations, and other events to help support logging functions."
+              },
+              {
+                "uuid": "0A0E9AC2-DFBC-4647-A229-BC506BBB6C58",
+                "control-id": "au-3",
+                "description": "Prisma events contain what, when, where, source, and objects/entities for policy violations."
+              },
+              {
+                "uuid": "42850581-0D7B-4D40-8CE4-2C06774D6F0C",
+                "control-id": "au-6.5",
+                "description": "Prisma can provide the vulnerability scans of the containers running in the cluster for the analysis."
+              },
+              {
+                "uuid": "0AA2D9E4-9BAB-43FB-A2BC-DDC705DA3756",
+                "control-id": "au-7",
+                "description": "Prisma provides audit records for compliance that qualify for this control."
+              },
+              {
+                "uuid": "65D258F9-784C-4864-A46B-D4C52749B7D1",
+                "control-id": "au-7.1",
+                "description": "Within Prisma records, sorting and searching are supported."
+              },
+              {
+                "uuid": "2B6A4097-2453-4967-9524-DBDEF9E83BF1",
+                "control-id": "au-8",
+                "description": "Allows the use of an external identiy OIDC provider for application login by configuring filter chain  matching hostname for application.\nBy restricting the lifetime of the JWT, Authservice will reauthenticate the user when it expires. The  IdP can then implement concurrent session control, enforced during reauthentication. This control can  then be inherited from the IdP. "
+              },
+              {
+                "uuid": "32F18D8E-9E59-4046-ABCB-800D8114BCC5",
+                "control-id": "au-9",
+                "description": "Prisma has RBAC for users, allowing restricted access to logs."
+              },
+              {
+                "uuid": "E55F72CD-145B-4B99-B378-E45811A20B1B",
+                "control-id": "au-9.4",
+                "description": "Prisma provides RBAC to retrict management of logs."
+              },
+              {
+                "uuid": "0519172E-CF6F-41CB-80F8-4EC2B2943AE1",
+                "control-id": "au-12",
+                "description": "Prima allows filtering of events that it detected and can export using a CSV."
+              },
+              {
+                "uuid": "DA65DB88-64FB-4DE4-9B93-37A44945D528",
+                "control-id": "au-12.1",
+                "description": "Prima can aggregate events across all of the clusters in is watching."
+              },
+              {
+                "uuid": "6C58AA66-65EE-4553-BF6B-77F25BC112B4",
+                "control-id": "au-12.3",
+                "description": "RBAC in prisma prevents unauthorized individuals from changing records"
+              },
+              {
+                "uuid": "E4A806FB-F98C-45BA-A31A-07F7C9EDAEBC",
+                "control-id": "ca-2.1",
+                "description": "Prisma provides vulnerability scanning and malware detection if configured to do so."
+              },
+              {
+                "uuid": "7967797E-9A69-4F44-AE38-3DAD31D607D8",
+                "control-id": "ca-7",
+                "description": "Prisma is setup to provide continuous monitoring of controls, vulnerabilities, runtime activities, and events. "
+              },
+              {
+                "uuid": "28FC4936-7E95-4BCA-9F59-9EB3D6D03B72",
+                "control-id": "cm-8",
+                "description": "Prisma provides a list of all clouds, hosts, namespaces, containers, and functions that it is setup to monitor."
+              },
+              {
+                "uuid": "781971C3-FC20-47F0-A52C-3016B43D83C4",
+                "control-id": "cm-8.1",
+                "description": "Prisma automatically updates its inventory when changes occur to cluster resources."
+              },
+              {
+                "uuid": "8B366469-4568-49C1-94EB-F7B84E1F7CD7",
+                "control-id": "cm-8.2",
+                "description": "Prisma maintains the currency, completeness, accuracy, and availability of cluster resources by periodically scanning."
+              },
+              {
+                "uuid": "73AD39A1-1B90-493C-9711-3D5850C2EE2D",
+                "control-id": "cm-8.3",
+                "description": "Prisma's Runtime Defense scans and protects against misconfigured/non-compliant/vulnerable hardware (cluster nodes) and software (both cluster and pod level).\nhttps://docs.paloaltonetworks.com/prisma/prisma-cloud/prisma-cloud-admin-compute/runtime_defense.html"
+              },
+              {
+                "uuid": "385F2CD0-5440-46F8-BCFF-7399C24F58A7",
+                "control-id": "ir-4.4",
+                "description": "Prisma has some forensic capabilties that can be used for incident correlation with flagged events"
+              },
+              {
+                "uuid": "1FED023C-6491-4CE2-99E2-44DD9BA41DD9",
+                "control-id": "ir-7.1",
+                "description": "Prisma has forensic capabilities that can be used as part of an incident response"
+              },
+              {
+                "uuid": "B75ED9FA-0A3E-444A-B971-7AC4D418ABCC",
+                "control-id": "ra-5",
+                "description": "Prisma monitors and scans for vulnerabilities in cluster resources.  CVEs, Risk scores, Risk factors, and impacted packages are provided"
+              },
+              {
+                "uuid": "722F2EEA-0A76-423C-80FB-E55F1C233E32",
+                "control-id": "ra-5.2",
+                "description": "If connected to the internet, Prisma will update the system vulnerabilities to be scanned."
+              },
+              {
+                "uuid": "DDBF857D-5972-43EE-8BF7-92C4401836C0",
+                "control-id": "ra-5.4",
+                "description": "Prisma auto-discovers changes to the cluster and will periodically scan new resources."
+              },
+              {
+                "uuid": "9F11DADD-43B0-460E-A753-5556D3D37D38",
+                "control-id": "ra-5.5",
+                "description": "Prisma supports RBAC which can be used to limit access to vulnerability monitoring and scanning."
+              },
+              {
+                "uuid": "C1B03E17-0172-45F7-807B-ACEC458E9EE9",
+                "control-id": "sa-9.2",
+                "description": "Prisma provides the ability to see ports used between hosts and between clusters resources."
+              },
+              {
+                "uuid": "B5B11EC4-DD74-47C4-A6FF-37A4CB591BFE",
+                "control-id": "sc-5",
+                "description": "If the application endpoint is configured to be protected by WAAS in Prisma, DoS protection can be enabled."
+              },
+              {
+                "uuid": "CEA5CC6E-A3E5-487A-8A08-0DF77E5766F7",
+                "control-id": "sc-7",
+                "description": "Prisma can monitor connections and control at the interfaces, but must be configured to do so."
+              },
+              {
+                "uuid": "AD5B77BA-5367-484F-8E66-94C8C18AE1EF",
+                "control-id": "si-3",
+                "description": "Prisma has the ability to scan images for malware.  This must be turned on in the settings."
+              },
+              {
+                "uuid": "EA4463FF-D8D2-40D3-9778-AD36FF0C79B1",
+                "control-id": "si-4",
+                "description": "Prisma has some detection of suspicious activities like port scanning, suspicious binaries, etc.  See https://docs.paloaltonetworks.com/prisma/prisma-cloud/21-08/prisma-cloud-compute-edition-admin/runtime_defense/incident_types.html"
+              },
+              {
+                "uuid": "360D3AFB-AF98-4581-ADE6-816D0981CCFF",
+                "control-id": "si-4.2",
+                "description": "Prisma has some detection of suspicious activities like port scanning, suspicious binaries, etc.  See https://docs.paloaltonetworks.com/prisma/prisma-cloud/21-08/prisma-cloud-compute-edition-admin/runtime_defense/incident_types.html"
+              },
+              {
+                "uuid": "BB8B3F39-6956-4251-B6DF-14BE68E86DDA",
+                "control-id": "si-4.5",
+                "description": "Alerts can be configured on system events in Prisma"
+              },
+              {
+                "uuid": "FF4401EE-B522-450F-BDCE-F74521EAA210",
+                "control-id": "si-5",
+                "description": "Alerts can be configured on new vulnerabilities and policy violations."
+              },
+              {
+                "uuid": "8A859A02-80CF-4E14-8432-31159F33E482",
+                "control-id": "si-5.1",
+                "description": "Alerts can be configured on new vulnerabilities and policy violations."
+              },
+              {
+                "uuid": "31B55588-E387-406D-8AF7-A5D6070F2B4D",
+                "control-id": "si-6",
+                "description": "Prisma can provide alerts for configured policy violations "
+              },
+              {
+                "uuid": "91D340FE-099E-4F9E-A61C-696716026A31",
+                "control-id": "si-7",
+                "description": "Prisma identifies when running image SHA does not match upstream repository source"
+              },
+              {
+                "uuid": "9CE4A0FC-B0BE-42E7-ABD5-C686245267B6",
+                "control-id": "si-7.1",
+                "description": "Prisma identifies when running image SHA does not match upstream repository source"
+              },
+              {
+                "uuid": "2D05A7D5-E0CD-430C-8CC3-3FFD2EDFD9A8",
+                "control-id": "si-7.2",
+                "description": "Alerts can be configured for Prisma events."
+              },
+              {
+                "uuid": "8982CFE9-7B34-4B61-9DE1-65F1FCA8AD35",
+                "control-id": "si-7.5",
+                "description": "Alerts can be configured for Prisma events."
+              },
+              {
+                "uuid": "3F7DA4E8-B162-46FB-86B7-6CD6FD919404",
+                "control-id": "sr.9",
+                "description": "Prisma identifies when running image SHA does not match upstream repository source"
+              },
+              {
+                "uuid": "B9ECF4C5-267D-420A-A062-12E7AED175C0",
+                "control-id": "sr-10",
+                "description": "Alerts can be configured on system events in Prisma"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
