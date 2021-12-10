@@ -143,12 +143,26 @@
       "components": [
         {
           "uuid": "C3DF3692-653E-461C-BAB3-C7770AEBF252",
+          "type": "software",
+          "description": "authservice",
+          "title": "Authservice - BB",
+          "name": "authservice",
+          "status": {
+            "state": "operational"
+          },
           "links": {
             "href": "https://raw.githubusercontent.com/runyontr/bigbang-oscap/main/authservice-component.json"
           }
         },
         {
           "uuid": "E2376A1D-25C8-4247-8A8A-765A7D0515B4",
+          "type": "software",
+          "description": "Prisma Cloud Compute",
+          "title": "Prisma Cloud Compute - BB",
+          "name": "prisma",
+          "status": {
+            "state": "operational"
+          },
           "links": {
             "href": "https://raw.githubusercontent.com/runyontr/bigbang-oscap/main/twistlock-component.json"
           }
