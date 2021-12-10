@@ -142,10 +142,14 @@
       ],
       "components": [
         {
-          "href": "https://raw.githubusercontent.com/runyontr/bigbang-oscap/main/authservice-component.json"
+          "links": {
+            "href": "https://raw.githubusercontent.com/runyontr/bigbang-oscap/main/authservice-component.json"
+          }
         },
         {
-          "href": "https://raw.githubusercontent.com/runyontr/bigbang-oscap/main/twistlock-component.json"
+          "links": {
+            "href": "https://raw.githubusercontent.com/runyontr/bigbang-oscap/main/twistlock-component.json"
+          }
         }
       ],
       "inventory-items": [

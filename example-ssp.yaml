@@ -87,8 +87,10 @@ system-security-plan:
           - name: type
             value: internal
     components:
-      - href:  https://raw.githubusercontent.com/runyontr/bigbang-oscap/main/authservice-component.json
-      - href:  https://raw.githubusercontent.com/runyontr/bigbang-oscap/main/twistlock-component.json
+      - links:
+          href:  https://raw.githubusercontent.com/runyontr/bigbang-oscap/main/authservice-component.json
+      - links:
+          href:  https://raw.githubusercontent.com/runyontr/bigbang-oscap/main/twistlock-component.json
     inventory-items:
       - uuid: c9c32657-a0eb-4cf2-b5c1-20928983063c
         description: The App.
