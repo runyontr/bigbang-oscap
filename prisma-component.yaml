@@ -82,8 +82,6 @@ component-definition:
         control-id: au-12.3
         description: >-
           RBAC in prisma prevents unauthorized individuals from changing records
-
-
       - uuid: E4A806FB-F98C-45BA-A31A-07F7C9EDAEBC
         control-id: ca-2.1
         description: >-
