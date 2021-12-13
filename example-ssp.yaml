@@ -156,34 +156,42 @@ system-security-plan:
               - param-id: ra-5_prm_2
                 values: 
                 - "hourly"
-      # - statement-id: ra-5_smt.c
-      #   uuid: CF762AD3-A0F3-4319-A18F-FB1E3A49A969
-      #   by-components:
-      #     - component-uuid: 98A726F0-4B28-4E1C-A43D-FBFDA38EF63D
-      #       uuid: DEF74CD6-86D8-4DE3-91C1-9A7F684696CC
-      #       description: >-
-      #         Twistlock installed on system.
-      # - statement-id: ra-5_smt.d
-      #   uuid: A189DA84-5653-477D-825A-34CF308ABB2F
-      #   by-components:
-      #     - component-uuid: 98A726F0-4B28-4E1C-A43D-FBFDA38EF63D
-      #       uuid: DEF74CD6-86D8-4DE3-91C1-9A7F684696CC
-      #       description: >-
-      #         Twistlock installed on system.
-      # - statement-id: ra-5_smt.e
-      #   uuid: 4DC792C2-01A4-47DA-BB20-4861A7D0C7AA
-      #   by-components:
-      #     - component-uuid: 98A726F0-4B28-4E1C-A43D-FBFDA38EF63D
-      #       uuid: DEF74CD6-86D8-4DE3-91C1-9A7F684696CC
-      #       description: >-
-      #         Twistlock installed on system.
-      # - statement-id: ra-5_smt.f
-      #   uuid: B16B675A-F5EE-44C4-A26A-A53A64AF0FC7
-      #   by-components:
-      #     - component-uuid: 98A726F0-4B28-4E1C-A43D-FBFDA38EF63D
-      #       uuid: DEF74CD6-86D8-4DE3-91C1-9A7F684696CC
-      #       description: >-
-      #         Twistlock installed on system.
+      - statement-id: ra-5_smt.c
+        uuid: CF762AD3-A0F3-4319-A18F-FB1E3A49A969
+        by-components:
+          - component-uuid: E2376A1D-25C8-4247-8A8A-765A7D0515B4
+            uuid: 4F0FD97B-240C-4757-A46A-522CB03DEA3A
+            description: >-
+              Twistlock installed on system.
+      - statement-id: ra-5_smt.d
+        uuid: A189DA84-5653-477D-825A-34CF308ABB2F
+        by-components:
+          - component-uuid: E2376A1D-25C8-4247-8A8A-765A7D0515B4
+            uuid: 1696EC58-BB80-4CB9-A634-E623296DFE48
+            description: >-
+              Twistlock installed on system.
+            set-parameters:
+              - param-id: ra-5_prm_2
+                values:
+                  - "weekly"
+      - statement-id: ra-5_smt.e
+        uuid: 4DC792C2-01A4-47DA-BB20-4861A7D0C7AA
+        by-components:
+          - component-uuid: E2376A1D-25C8-4247-8A8A-765A7D0515B4
+            uuid: 028048B2-D995-41E6-9E7C-1E35CC54A1CC
+            description: >-
+              Twistlock installed on system.
+            set-parameters:
+              - param-id: ra-5_prm_3
+                values:
+                  - "immediately"
+      - statement-id: ra-5_smt.f
+        uuid: B16B675A-F5EE-44C4-A26A-A53A64AF0FC7
+        by-components:
+          - component-uuid: E2376A1D-25C8-4247-8A8A-765A7D0515B4
+            uuid: 075FDBD9-5049-4717-A92C-C513DF5020B8
+            description: >-
+              Twistlock installed on system.
         
   #     - uuid: aaadb3ff-6ae8-4332-92db-211468c52af2
   #       control-id: au-1
