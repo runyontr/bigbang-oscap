@@ -23,7 +23,7 @@ system-security-plan:
         type: organization
         name: Mission Owner
   import-profile:
-    href: https://raw.githubusercontent.com/usnistgov/oscal-content/master/nist.gov/SP800-53/rev5/yaml/NIST_SP-800-53_rev5_HIGH-baseline_profile.yaml
+    href: https://raw.githubusercontent.com/usnistgov/oscal-content/master/nist.gov/SP800-53/rev5/xml/NIST_SP-800-53_rev5_HIGH-baseline_profile.xml
   system-characteristics:
     system-name: Super Awesome Mission APp
     description: This is an example of a system that mission capabilities on Big Bang
