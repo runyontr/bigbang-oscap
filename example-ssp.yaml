@@ -119,7 +119,7 @@ system-security-plan:
             party-uuids:
               - 3b2a5599-cc37-403f-ae36-5708fa804b27
         implemented-components:
-          - component-uuid: 98A726F0-4B28-4E1C-A43D-FBFDA38EF63D # prisma
+          - component-uuid: E2376A1D-25C8-4247-8A8A-765A7D0515B4 # prisma
             responsible-parties:
             - role-id: asset-administrator
               party-uuids:
@@ -127,7 +127,7 @@ system-security-plan:
             - role-id: asset-owner
               party-uuids:
                 - 0f0c15ed-565e-4ce9-8670-b54853d0bf03
-          - component-uuid: 96D90418-4CF5-40F1-9AB3-777F81B39C7E # authservice
+          - component-uuid: C3DF3692-653E-461C-BAB3-C7770AEBF252 # authservice
   control-implementation:
     description: This is the control implementation for the system.
     implemented-requirements:
