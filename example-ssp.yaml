@@ -137,7 +137,7 @@ system-security-plan:
       - statement-id: ra-5_smt.a
         uuid: 2CCE1C1D-6109-484D-9211-6119BD4EFFD5
         by-components:
-          - component-uuid: 98A726F0-4B28-4E1C-A43D-FBFDA38EF63D
+          - component-uuid: E2376A1D-25C8-4247-8A8A-765A7D0515B4
             uuid: DEF74CD6-86D8-4DE3-91C1-9A7F684696CC
             description: >-
               Twistlock installed on system.
@@ -148,7 +148,7 @@ system-security-plan:
       - statement-id: ra-5_smt.b
         uuid: 2B66DB60-12E9-4FFA-B024-6F5E6A2ECFDA
         by-components:
-          - component-uuid: 98A726F0-4B28-4E1C-A43D-FBFDA38EF63D
+          - component-uuid: E2376A1D-25C8-4247-8A8A-765A7D0515B4
             uuid: DEF74CD6-86D8-4DE3-91C1-9A7F684696CC
             description: >-
               Twistlock installed on system.
