@@ -220,7 +220,26 @@ system-security-plan:
             uuid: 075FDBD9-5049-4717-A92C-C513DF5020B8
             description: >-
               Twistlock installed on system.
-        
+
+  back-matter:
+    resources:
+      - uuid: 985475ee-d4d6-4581-8fdf-d84d3d8caa48
+        title: Authservice Component
+        props:
+          - name: type
+            value: bigbang-component
+        rlinks:
+          - href: https://repo1.dso.mil/platform-one/big-bang/apps/core/authservice/-/blob/oscal/authservice-component.yaml
+        remarks: Provided by Platform One
+      - uuid: 8FFA01CC-B5BA-473A-9603-AC59A876F38D
+        title: Prisma Cloud Compute Component
+        props:
+        - name: type
+          value: bigbang-component
+        rlinks:
+        - href: https://github.com/runyontr/bigbang-oscap/blob/main/prisma-component.yaml
+        remarks: Provided by Platform One
+
   #     - uuid: aaadb3ff-6ae8-4332-92db-211468c52af2
   #       control-id: au-1
   #       statements:

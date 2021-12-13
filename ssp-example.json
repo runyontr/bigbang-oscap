@@ -368,6 +368,42 @@
           ]
         }
       ]
+    },
+    "back-matter": {
+      "resources": [
+        {
+          "uuid": "985475ee-d4d6-4581-8fdf-d84d3d8caa48",
+          "title": "Authservice Component",
+          "props": [
+            {
+              "name": "type",
+              "value": "bigbang-component"
+            }
+          ],
+          "rlinks": [
+            {
+              "href": "https://repo1.dso.mil/platform-one/big-bang/apps/core/authservice/-/blob/oscal/authservice-component.yaml"
+            }
+          ],
+          "remarks": "Provided by Platform One"
+        },
+        {
+          "uuid": "8FFA01CC-B5BA-473A-9603-AC59A876F38D",
+          "title": "Prisma Cloud Compute Component",
+          "props": [
+            {
+              "name": "type",
+              "value": "bigbang-component"
+            }
+          ],
+          "rlinks": [
+            {
+              "href": "https://github.com/runyontr/bigbang-oscap/blob/main/prisma-component.yaml"
+            }
+          ],
+          "remarks": "Provided by Platform One"
+        }
+      ]
     }
   }
 }
