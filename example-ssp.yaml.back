@@ -1,0 +1,363 @@
+---
+system-security-plan:
+  uuid: cff8385f-108e-40a5-8f7a-82f3dc0eaba8
+  metadata:
+    title: Mission App
+    last-modified: 2021-06-08T13:57:28.355446-04:00
+    version: "1.0"
+    oscal-version: 1.0.0
+    roles:
+      - id: legal-officer
+        title: Legal Officer
+    parties:
+      - uuid: 3b2a5599-cc37-403f-ae36-5708fa804b27
+        type: organization
+        name: Platform One
+      - uuid: 833ac398-5c9a-4e6b-acba-2a9c11399da0
+        type: organization
+        name: AWS
+      - uuid: ec485dcf-2519-43f5-8e7d-014cc315332d
+        type: organization
+        name: Kubernetes Vendor Number 11
+      - uuid: 0f0c15ed-565e-4ce9-8670-b54853d0bf03
+        type: organization
+        name: Mission Owner
+  import-profile:
+    href: https://raw.githubusercontent.com/usnistgov/oscal-content/master/nist.gov/SP800-53/rev5/yaml/NIST_SP-800-53_rev5_HIGH-baseline_profile.yaml
+  system-characteristics:
+    system-name: Super Awesome Mission APp
+    description: This is an example of a system that mission capabilities on Big Bang
+    system-ids:
+      - id: d7456980-9277-4dcb-83cf-f8ff0442623b
+        identifier-type: https://ietf.org/rfc/rfc4122
+    security-sensitivity-level: moderate
+    system-information:
+      information-types:
+        - uuid: 7d28ac6e-5970-4f4c-a508-5a3715f0f02b
+          title: System and Network Monitoring
+          categorizations:
+            - system: https://doi.org/10.6028/NIST.SP.800-60v2r1
+              information-type-ids:
+                - C.3.5.8
+          description: This system maintains historical logging and auditing information
+            for all client devices connected to this system.
+          confidentiality-impact:
+            base: fips-199-moderate
+          integrity-impact:
+            base: fips-199-moderate
+          availability-impact:
+            base: fips-199-low
+    security-impact-level:
+      security-objective-confidentiality: fips-199-moderate
+      security-objective-integrity: fips-199-moderate
+      security-objective-availability: fips-199-low
+    status:
+      state: other
+      remarks: This is an example, and is not intended to be implemented as a system
+    props:
+      - name: deployment-model
+        value: private
+      - name: service-models
+        value: iaas
+    authorization-boundary:
+      description: The description of the authorization boundary would go here.
+  system-implementation:
+    remarks: This is a partial implementation that addresses the logging server
+      portion of the auditing system.
+    users:
+      - uuid: 9824089b-322c-456f-86c4-4111c4200f69
+        title: System Administrator
+        role-ids:
+          - asset-administrator
+        props:
+          - name: type
+            value: internal
+      - uuid: ae8de94c-835d-4303-83b1-114b6a117a07
+        title: Audit Team
+        role-ids:
+          - asset-owner
+        props:
+          - name: type
+            value: internal
+      - uuid: 372ce7a3-92b0-437e-a98c-24d29f9bfab8
+        title: Legal Department
+        role-ids:
+          - legal-officer
+        props:
+          - name: type
+            value: internal
+    components:
+      - uuid: C3DF3692-653E-461C-BAB3-C7770AEBF252
+        type: software
+        description: authservice
+        title: "Authservice - BB"
+        name: authservice
+        status:
+          state: operational
+        links:
+          href:  https://raw.githubusercontent.com/runyontr/bigbang-oscap/main/authservice-component.json
+      - uuid: E2376A1D-25C8-4247-8A8A-765A7D0515B4
+        type: software
+        description: Prisma Cloud Compute
+        title: "Prisma Cloud Compute - BB"
+        name: prisma
+        status:
+          state: operational
+        links:
+          href:  https://raw.githubusercontent.com/runyontr/bigbang-oscap/main/twistlock-component.json
+    inventory-items:
+      - uuid: c9c32657-a0eb-4cf2-b5c1-20928983063c
+        description: The App.
+        props:
+          - name: asset-id
+            value: asset-id-mission-app
+        responsible-parties:
+          - role-id: asset-integrator
+            party-uuids:
+              - 0f0c15ed-565e-4ce9-8670-b54853d0bf03
+          - role-id: component-provider
+            party-uuids:
+              - 3b2a5599-cc37-403f-ae36-5708fa804b27
+        implemented-components:
+          - component-uuid: E2376A1D-25C8-4247-8A8A-765A7D0515B4 # prisma
+            responsible-parties:
+            - role-id: asset-administrator
+              party-uuids:
+                - 0f0c15ed-565e-4ce9-8670-b54853d0bf03
+            - role-id: asset-owner
+              party-uuids:
+                - 0f0c15ed-565e-4ce9-8670-b54853d0bf03
+          - component-uuid: C3DF3692-653E-461C-BAB3-C7770AEBF252 # authservice
+  control-implementation:
+    description: This is the control implementation for the system.
+    implemented-requirements:
+    - uuid: 3EBBAB88-3247-44EE-8009-66DF265BEA00
+      control-id: ra-5
+      props:
+          - name: planned-completion-date
+            ns: https://fedramp.gov/ns/oscal
+            value: 2020-11-27Z
+          - name: implementation-status
+            ns: https://fedramp.gov/ns/oscal
+            value: planned
+            remarks: Describe the plan to complete the implementation.
+          - name: control-origination
+            ns: https://fedramp.gov/ns/oscal
+            value: sp-system
+      statements:
+      - statement-id: ra-5_smt.a
+        uuid: 2CCE1C1D-6109-484D-9211-6119BD4EFFD5
+        by-components:
+          - component-uuid: E2376A1D-25C8-4247-8A8A-765A7D0515B4
+            uuid: DEF74CD6-86D8-4DE3-91C1-9A7F684696CC
+            description: >-
+              Twistlock installed on system.
+            set-parameters:
+              - param-id: ra-5_prm_1
+                values: 
+                - "hourly"
+      - statement-id: ra-5_smt.b
+        uuid: 2B66DB60-12E9-4FFA-B024-6F5E6A2ECFDA
+        by-components:
+          - component-uuid: E2376A1D-25C8-4247-8A8A-765A7D0515B4
+            uuid: DEF74CD6-86D8-4DE3-91C1-9A7F684696CC
+            description: >-
+              Twistlock installed on system.
+      - statement-id: ra-5_smt.b.1
+        uuid: 0ADA4B86-A088-4560-9BA7-98642ED813A2
+        by-components:
+          - component-uuid: E2376A1D-25C8-4247-8A8A-765A7D0515B4
+            uuid: DA2A2574-B62F-48BB-B18B-65DFB22256F8
+            description: >-
+              Twistlock installed on system.
+      - statement-id: ra-5_smt.b.2
+        uuid: AD3C7F84-BF99-4895-A9A4-B2F972D5A7E3
+        by-components:
+          - component-uuid: E2376A1D-25C8-4247-8A8A-765A7D0515B4
+            uuid: A57DF751-74C5-41A3-A811-EE2A2A6FFB2D
+            description: >-
+              Twistlock installed on system.
+      - statement-id: ra-5_smt.b.3
+        uuid: EB78905E-074E-45B3-B046-5535D9E8DF3B
+        by-components:
+          - component-uuid: E2376A1D-25C8-4247-8A8A-765A7D0515B4
+            uuid: 024F1CF6-C874-417B-8549-D35652523B18
+            description: >-
+              Twistlock installed on system.
+      - statement-id: ra-5_smt.c
+        uuid: CF762AD3-A0F3-4319-A18F-FB1E3A49A969
+        by-components:
+          - component-uuid: E2376A1D-25C8-4247-8A8A-765A7D0515B4
+            uuid: 4F0FD97B-240C-4757-A46A-522CB03DEA3A
+            description: >-
+              Twistlock installed on system.
+      - statement-id: ra-5_smt.d
+        uuid: A189DA84-5653-477D-825A-34CF308ABB2F
+        by-components:
+          - component-uuid: E2376A1D-25C8-4247-8A8A-765A7D0515B4
+            uuid: 1696EC58-BB80-4CB9-A634-E623296DFE48
+            description: >-
+              Twistlock installed on system.
+            set-parameters:
+              - param-id: ra-5_prm_2
+                values:
+                  - "weekly"
+      - statement-id: ra-5_smt.e
+        uuid: 4DC792C2-01A4-47DA-BB20-4861A7D0C7AA
+        by-components:
+          - component-uuid: E2376A1D-25C8-4247-8A8A-765A7D0515B4
+            uuid: 028048B2-D995-41E6-9E7C-1E35CC54A1CC
+            description: >-
+              Twistlock installed on system.
+            set-parameters:
+              - param-id: ra-5_prm_3
+                values:
+                  - "immediately"
+      - statement-id: ra-5_smt.f
+        uuid: B16B675A-F5EE-44C4-A26A-A53A64AF0FC7
+        by-components:
+          - component-uuid: E2376A1D-25C8-4247-8A8A-765A7D0515B4
+            uuid: 075FDBD9-5049-4717-A92C-C513DF5020B8
+            description: >-
+              Twistlock installed on system.
+        
+  #     - uuid: aaadb3ff-6ae8-4332-92db-211468c52af2
+  #       control-id: au-1
+  #       statements:
+  #         - statement-id: au-1_smt
+  #           uuid: 7ad47329-dc55-4196-a19d-178a8fe7438d
+  #         - statement-id: au-1_smt.a
+  #           uuid: f3887a91-9ed3-425c-b305-21e4634a1c34
+  #           by-components:
+  #             - component-uuid: 795533ab-9427-4abe-820f-0b571bacfe6d
+  #               uuid: a74681b2-fbcb-46eb-90fd-0d55aa74ac7b
+  #               description: The legal department develops, documents and disseminates this
+  #                 policy to all staff and contractors within the organization.
+  #               set-parameters:
+  #                 - param-id: au-1_prm_1
+  #                   values:
+  #                     - all staff and contractors within the organization
+  #             - component-uuid: 941e2a87-46f4-4b3e-9e87-bbd187091ca1
+  #               uuid: 4f873ce6-dd49-4a46-bd4a-5041c22665f1
+  #               description: The IT department created and maintains this procedure. This
+  #                 department disseminates it to all IT staff who administer this
+  #                 system when the staff member is assigned and annually through
+  #                 training.
+  #               set-parameters:
+  #                 - param-id: au-1_prm_1
+  #                   values:
+  #                     - all IT staff who administer this system when the staff
+  #                       member is assigned and annually through training
+  #             - component-uuid: fa39eb84-3014-46b4-b6bc-7da10527c262
+  #               uuid: ea85a624-cd21-4c63-abe0-f66087e97241
+  #               description: The IT department created and maintains this procedure. This
+  #                 department disseminates it to all IT staff who administer this
+  #                 system when the staff member is assigned and annually through
+  #                 training.
+  #               set-parameters:
+  #                 - param-id: au-1_prm_1
+  #                   values:
+  #                     - all IT staff who administer this system when the staff
+  #                       member is assigned and annually through training
+  #             - component-uuid: 4938767c-dd8b-4ea4-b74a-fafffd48ac99
+  #               uuid: b5e5823a-844f-4306-a5ab-7e110679e0d5
+  #               description: The IT department created and maintains this procedure. This
+  #                 department disseminates it to all IT staff who administer this
+  #                 system when the staff member is assigned and annually through
+  #                 training.
+  #               set-parameters:
+  #                 - param-id: au-1_prm_1
+  #                   values:
+  #                     - all IT staff who administer this system when the staff
+  #                       member is assigned and annually through training
+  #         - statement-id: au-1_smt.a.1
+  #           uuid: 6fe632bd-33aa-4eea-a507-a37f0d212085
+  #           by-components:
+  #             - component-uuid: 795533ab-9427-4abe-820f-0b571bacfe6d
+  #               uuid: 2d0a7b08-da7f-4691-b99c-8fd9df02b25c
+  #               description: This policy explicitly states the purpose and scope of the policy
+  #                 in Section 1. Roles and responsibilities are described in
+  #                 Section 2. This section also describes responsibilities for
+  #                 organizational coordination. Management commitment and
+  #                 compliance statements are made in the board’s directive memo
+  #                 dated January 1, 2012.
+  #         - statement-id: au-1_smt.a.2
+  #           uuid: dbe9af68-1cd9-4ff1-965b-8f887351d411
+  #           by-components:
+  #             - component-uuid: 941e2a87-46f4-4b3e-9e87-bbd187091ca1
+  #               uuid: dd4fd380-7a2a-4fba-9e98-933ba5cfc04d
+  #               description: "This process aligns with the enterprise Logging, Monitoring, and
+  #                 Alerting Policy, Version 2.1, October 15, 2018. The following
+  #                 processes work together to fully implement the policy: System
+  #                 Integration Process, Inventory Management Process,
+  #                 Configuration Management, Log Review Process, and Monitoring
+  #                 and Alerting Process"
+  #             - component-uuid: fa39eb84-3014-46b4-b6bc-7da10527c262
+  #               uuid: 3b912d0f-2463-497c-8d8a-72416f38e999
+  #               description: "This process aligns with the enterprise Logging, Monitoring, and
+  #                 Alerting Policy, Version 2.1, October 15, 2018. The following
+  #                 processes work together to fully implement the policy: System
+  #                 Integration Process, Inventory Management Process,
+  #                 Configuration Management, Log Review Process, and Monitoring
+  #                 and Alerting Process"
+  #             - component-uuid: 4938767c-dd8b-4ea4-b74a-fafffd48ac99
+  #               uuid: 226ee2a2-cbdb-498f-8182-94dfa013476c
+  #               description: "This process aligns with the enterprise Logging, Monitoring, and
+  #                 Alerting Policy, Version 2.1, October 15, 2018. The following
+  #                 processes work together to fully implement the policy: System
+  #                 Integration Process, Inventory Management Process,
+  #                 Configuration Management, Log Review Process, and Monitoring
+  #                 and Alerting Process"
+  #         - statement-id: au-1_smt.b
+  #           uuid: b1773cd6-afc5-4c87-84a7-f182e6be5af9
+  #           remarks: N/A
+  #         - statement-id: au-1_smt.b.1
+  #           uuid: 75873308-f37d-4e89-9c27-29f3dee4b314
+  #           by-components:
+  #             - component-uuid: 795533ab-9427-4abe-820f-0b571bacfe6d
+  #               uuid: 23903c59-1327-46f0-9c28-09ec7f144214
+  #               set-parameters:
+  #                 - param-id: au-1_prm_2
+  #                   values:
+  #                     - annually, and other times as necessary in response to
+  #                       regulatory or organizational changes
+  #               description: The legal department reviews this policy annually, and other times
+  #                 as necessary in response to regulatory or organizational
+  #                 changes. The legal department updates the policy as needed
+  #                 based on these reviews.
+  #         - statement-id: au-1_smt.b.2
+  #           uuid: 74b5b0f2-9915-4f80-b7cd-379566442ab6
+  #           by-components:
+  #             - component-uuid: 941e2a87-46f4-4b3e-9e87-bbd187091ca1
+  #               uuid: 0c45b6e2-f85b-4656-a6cc-2a302d184720
+  #               set-parameters:
+  #                 - param-id: au-1_prm_3
+  #                   values:
+  #                     - annually, and other times as necessary in response to
+  #                       regulatory or organizational changes
+  #               description: The IT department reviews this process annually, and other times as
+  #                 necessary in response to regulatory or organizational changes.
+  #                 The IT department updates the policy as needed based on these
+  #                 reviews.
+  #             - component-uuid: fa39eb84-3014-46b4-b6bc-7da10527c262
+  #               uuid: 094f02ce-4b7a-405c-90a5-ab4d95133f74
+  #               set-parameters:
+  #                 - param-id: au-1_prm_3
+  #                   values:
+  #                     - annually, and other times as necessary in response to
+  #                       regulatory or organizational changes
+  #               description: The IT department reviews this process annually, and other times as
+  #                 necessary in response to regulatory or organizational changes.
+  #                 The IT department updates the policy as needed based on these
+  #                 reviews.
+  #             - component-uuid: 4938767c-dd8b-4ea4-b74a-fafffd48ac99
+  #               uuid: 7ec8b7ec-d931-4055-ac74-6d288d636787
+  #               set-parameters:
+  #                 - param-id: au-1_prm_3
+  #                   values:
+  #                     - annually, and other times as necessary in response to
+  #                       regulatory or organizational changes
+  #               description: The IT department reviews this process annually, and other times as
+  #                 necessary in response to regulatory or organizational changes.
+  #                 The IT department updates the policy as needed based on these
+  #                 reviews

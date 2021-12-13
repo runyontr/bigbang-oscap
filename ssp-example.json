@@ -223,6 +223,24 @@
         {
           "uuid": "3EBBAB88-3247-44EE-8009-66DF265BEA00",
           "control-id": "ra-5",
+          "props": [
+            {
+              "name": "planned-completion-date",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "2020-11-27Z"
+            },
+            {
+              "name": "implementation-status",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "planned",
+              "remarks": "Describe the plan to complete the implementation."
+            },
+            {
+              "name": "control-origination",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "sp-system"
+            }
+          ],
           "statements": [
             {
               "statement-id": "ra-5_smt.a",
@@ -250,15 +268,40 @@
                 {
                   "component-uuid": "E2376A1D-25C8-4247-8A8A-765A7D0515B4",
                   "uuid": "DEF74CD6-86D8-4DE3-91C1-9A7F684696CC",
-                  "description": "Twistlock installed on system.",
-                  "set-parameters": [
-                    {
-                      "param-id": "ra-5_prm_2",
-                      "values": [
-                        "hourly"
-                      ]
-                    }
-                  ]
+                  "description": "Twistlock installed on system."
+                }
+              ]
+            },
+            {
+              "statement-id": "ra-5_smt.b.1",
+              "uuid": "0ADA4B86-A088-4560-9BA7-98642ED813A2",
+              "by-components": [
+                {
+                  "component-uuid": "E2376A1D-25C8-4247-8A8A-765A7D0515B4",
+                  "uuid": "DA2A2574-B62F-48BB-B18B-65DFB22256F8",
+                  "description": "Twistlock installed on system."
+                }
+              ]
+            },
+            {
+              "statement-id": "ra-5_smt.b.2",
+              "uuid": "AD3C7F84-BF99-4895-A9A4-B2F972D5A7E3",
+              "by-components": [
+                {
+                  "component-uuid": "E2376A1D-25C8-4247-8A8A-765A7D0515B4",
+                  "uuid": "A57DF751-74C5-41A3-A811-EE2A2A6FFB2D",
+                  "description": "Twistlock installed on system."
+                }
+              ]
+            },
+            {
+              "statement-id": "ra-5_smt.b.3",
+              "uuid": "EB78905E-074E-45B3-B046-5535D9E8DF3B",
+              "by-components": [
+                {
+                  "component-uuid": "E2376A1D-25C8-4247-8A8A-765A7D0515B4",
+                  "uuid": "024F1CF6-C874-417B-8549-D35652523B18",
+                  "description": "Twistlock installed on system."
                 }
               ]
             },
