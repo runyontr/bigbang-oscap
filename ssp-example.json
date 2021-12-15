@@ -287,14 +287,14 @@
                 {
                   "component-uuid": "C3DF3692-653E-461C-BAB3-C7770AEBF252",
                   "uuid": "C0A9B631-47CB-482B-9681-7895A51C5B17",
-                  "description": "Authservice is configured to enforce via P1 Keycloak"
-                }
-              ],
-              "set-parameters": [
-                {
-                  "param-id": "ac-2.1_prm_1",
-                  "values": [
-                    "Platform One Keycloak"
+                  "description": "Authservice is configured to enforce via P1 Keycloak",
+                  "set-parameters": [
+                    {
+                      "param-id": "ac-2.1_prm_1",
+                      "values": [
+                        "Platform One Keycloak"
+                      ]
+                    }
                   ]
                 }
               ]
