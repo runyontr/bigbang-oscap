@@ -29,6 +29,10 @@ component-definition:
       source: https://raw.githubusercontent.com/usnistgov/oscal-content/master/nist.gov/SP800-53/rev5/json/NIST_SP-800-53_rev5_catalog.json
       description:
         Controls implemented by authservice for inheritance by applications
+      set-parameter:
+        - param-id: ac-2.1_prm_1
+          values:
+            - upstream OpenIDConnect identity provider
       implemented-requirements:
       - uuid: 6EC9C476-9C9D-4EF6-854B-A5B799D8AED1
         control-id: ac-2.1
@@ -40,10 +44,6 @@ component-definition:
         - statement-id: ac-2.1_smt
           uuid: 2B1DBF7B-1CBC-4AE9-B1F3-E537FB18DB96
           description: it does this
-        set-parameters:
-        - param-id: ac-2.1_prm_1
-          values:
-            - upstream OpenIDConnect identity provider
       - uuid: 373074CC-F1EA-40CB-AD17-DB8F199D0600
         control-id: ac-2.2
         description: >-
