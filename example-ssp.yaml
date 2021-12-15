@@ -52,15 +52,15 @@ system-security-plan:
       security-objective-integrity: fips-199-moderate
       security-objective-availability: fips-199-low
     status:
-      state: other
-      remarks: This is an example, and is not intended to be implemented as a system
+      state: implemented
+      remarks: or would be, if it were real
     props:
     - name: deployment-model
       value: private
     - name: service-models
       value: iaas
     authorization-boundary:
-      description: The description of the authorization boundary would go here.
+      description: The Authorization Boundary of the app is provided by the CNAP
   system-implementation:
     remarks: This is a partial implementation that addresses the logging server portion
       of the auditing system.
@@ -105,6 +105,27 @@ system-security-plan:
         state: operational
       links:
         href: https://raw.githubusercontent.com/runyontr/bigbang-oscap/main/twistlock-component.json
+    - uuid: A1279353-AC07-4848-95A8-E2566CF900E7
+      type: network
+      description: Cloud Native Access Point
+      title: Cloud Native Access Point
+      name: cnap
+      status:
+        state: planned
+    - uuid: 52D06898-F33B-4B44-BCFB-49819E72DCAD
+      type: software
+      description: EKS cluster on AWS
+      title: EKS
+      name: eks
+      status:
+        state: planned
+    - uuid: A7660CB1-7E23-43EA-9EA2-FFE7A9D1089D
+      type: this-system
+      description: The mission app itself
+      title: Mission App
+      name: mission app
+      status:
+        state: operational
     inventory-items:
     - uuid: c9c32657-a0eb-4cf2-b5c1-20928983063c
       description: The App.
