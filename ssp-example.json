@@ -450,6 +450,12 @@
                 "prior to a new scan",
                 "when new vulnerabilities are identified"
               ]
+            },
+            {
+              "param-id": "ra-5.2_prm_2",
+              "values": [
+                "weekly"
+              ]
             }
           ],
           "statements": [

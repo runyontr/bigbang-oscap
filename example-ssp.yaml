@@ -257,6 +257,9 @@ system-security-plan:
         values:
           - prior to a new scan
           - when new vulnerabilities are identified
+      - param-id: ra-5.2_prm_2
+        values:
+          - weekly
       statements:
       - statement-id: ra-5.2_smt
         uuid: 620B2AFD-8EBB-4C0B-941D-1A74A67EB214
