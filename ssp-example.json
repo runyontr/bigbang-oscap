@@ -447,7 +447,8 @@
             {
               "param-id": "ra-5.2_prm_1",
               "values": [
-                "when new vulnerabilities are identified and reported"
+                "prior to a new scan",
+                "when new vulnerabilities are identified"
               ]
             }
           ],
