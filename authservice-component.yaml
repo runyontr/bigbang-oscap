@@ -36,14 +36,6 @@ component-definition:
           Authservice allows the use of an extenrral idtntiy OIDC provider for application login
           by configuring filter chain matching for hostname (headers) for applications.  This control can then
           be inherited by the Identity Provider
-        statements:
-        - statement-id: ac-2.1_smt
-          uuid: 2B1DBF7B-1CBC-4AE9-B1F3-E537FB18DB96
-          description: it does this
-          set-parameters:
-            - param-id: ac-2.1_prm_1
-              values:
-                - upstream OpenIDConnect identity provider
       - uuid: 373074CC-F1EA-40CB-AD17-DB8F199D0600
         control-id: ac-2.2
         description: >-
