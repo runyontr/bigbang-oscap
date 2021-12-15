@@ -196,5 +196,10 @@ component-definition:
         control-id: sr-10
         description: >-
           Alerts can be configured on system events in Prisma
-
+  back-matter:
+    resources:
+    - uuid:
+      title: Prisma Cloud Compute
+      rlinks:
+        - href: https://www.paloaltonetworks.com/resources/datasheets/prisma-cloud-compute-edition-aag
  

@@ -243,6 +243,19 @@
           }
         ]
       }
-    ]
+    ],
+    "back-matter": {
+      "resources": [
+        {
+          "uuid": null,
+          "title": "Prisma Cloud Compute",
+          "rlinks": [
+            {
+              "href": "https://www.paloaltonetworks.com/resources/datasheets/prisma-cloud-compute-edition-aag"
+            }
+          ]
+        }
+      ]
+    }
   }
 }
