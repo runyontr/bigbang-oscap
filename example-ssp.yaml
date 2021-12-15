@@ -145,27 +145,13 @@ system-security-plan:
         ns: https://fedramp.gov/ns/oscal
         value: sp-system
       set-parameters:
-      - param-id: ra-5_prm_1
-        values:
-        - daily
-      - param-id: ra-5_prm_2
-        values:
-        - within 24 hours of identification
-      - param-id: ra-5_prm_3
-        values:
-        - admins
       - param-id: ra-5.2_prm_1
         values:
-          - when new vulnerabilities are identified and reported
-      - param-id: ra-5.4_prm_1
+          - prior to a new scan
+          - when new vulnerabilities are identified
+      - param-id: ra-5.2_prm_2
         values:
-          - immediate
-      - param-id: ra-5.5_prm_1
-        values:
-          - twistlock defenders
-      - param-id: ra-5.5_prm_2
-        values: 
-          - runtime defense monitoring
+          - weekly
       statements:
       - statement-id: ra-5_smt.a
         uuid: 2CCE1C1D-6109-484D-9211-6119BD4EFFD5
