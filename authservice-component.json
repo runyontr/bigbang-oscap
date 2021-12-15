@@ -42,7 +42,15 @@
               {
                 "uuid": "6EC9C476-9C9D-4EF6-854B-A5B799D8AED1",
                 "control-id": "ac-2.1",
-                "description": "Authservice allows the use of an extenrral idtntiy OIDC provider for application login by configuring filter chain matching for hostname (headers) for applications.  This control can then be inherited by the Identity Provider"
+                "description": "Authservice allows the use of an extenrral idtntiy OIDC provider for application login by configuring filter chain matching for hostname (headers) for applications.  This control can then be inherited by the Identity Provider",
+                "set-parameters": [
+                  {
+                    "param-id": "ac-2.1_prm_1",
+                    "values": [
+                      "upstream OpenIDConnect identity provider"
+                    ]
+                  }
+                ]
               },
               {
                 "uuid": "373074CC-F1EA-40CB-AD17-DB8F199D0600",
