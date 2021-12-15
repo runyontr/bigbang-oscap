@@ -129,7 +129,7 @@ system-security-plan:
           - 0f0c15ed-565e-4ce9-8670-b54853d0bf03
       - component-uuid: C3DF3692-653E-461C-BAB3-C7770AEBF252
   control-implementation:
-    description: This is the control implementation for the system.
+    description: NIST 800 53 controls implemented for system
     implemented-requirements:
     - uuid: 3EBBAB88-3247-44EE-8009-66DF265BEA00
       control-id: ra-5
@@ -169,6 +169,8 @@ system-security-plan:
       statements:
       - statement-id: ra-5_smt.a
         uuid: 2CCE1C1D-6109-484D-9211-6119BD4EFFD5
+        implementation-status:
+          state: implemented
         by-components:
         - component-uuid: E2376A1D-25C8-4247-8A8A-765A7D0515B4
           uuid: DEF74CD6-86D8-4DE3-91C1-9A7F684696CC
@@ -234,10 +236,10 @@ system-security-plan:
           uuid: 075FDBD9-5049-4717-A92C-C513DF5020B8
           description: Twistlock installed on system.
       - statement-id: ra-5.2_smt
-        uuid: 311CE854-8623-4A27-8E5E-00701A1DF16D
+        uuid: DCC82499-37E3-4CFF-A97A-3072FDE635AB
         by-components:
         - component-uuid: E2376A1D-25C8-4247-8A8A-765A7D0515B4
-          uuid: 8C0BE9CD-76A0-47A1-BD3D-873BCF0B9C9F
+          uuid: B5E95D2C-5B55-4402-A471-025BAC2F511A
           description: Twistlock is installed on the system
           set-parameters:
           - param-id: ra-5.2_prm_1
@@ -247,6 +249,8 @@ system-security-plan:
           - param-id: ra-5.2_prm_2
             values:
               - weekly
+        implementation-status:
+          state: implemented
 
     - uuid: A3B90E29-6D14-4368-A0D6-E0660265776A
       control-id: ra-5.2
