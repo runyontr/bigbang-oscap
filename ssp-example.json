@@ -416,7 +416,22 @@
                 {
                   "component-uuid": "E2376A1D-25C8-4247-8A8A-765A7D0515B4",
                   "uuid": "8C0BE9CD-76A0-47A1-BD3D-873BCF0B9C9F",
-                  "description": "Twistlock is installed on the system"
+                  "description": "Twistlock is installed on the system",
+                  "set-parameters": [
+                    {
+                      "param-id": "ra-5.2_prm_1",
+                      "values": [
+                        "prior to a new scan",
+                        "when new vulnerabilities are identified"
+                      ]
+                    },
+                    {
+                      "param-id": "ra-5.2_prm_2",
+                      "values": [
+                        "weekly"
+                      ]
+                    }
+                  ]
                 }
               ]
             }
