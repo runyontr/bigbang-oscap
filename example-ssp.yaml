@@ -164,7 +164,7 @@ system-security-plan:
         remarks: Describe the plan to complete the implementation.
       - name: control-origination
         ns: https://fedramp.gov/ns/oscal
-        value: sp-system
+        value: inherited
       set-parameters:
       - param-id: ra-5.2_prm_1
         values:

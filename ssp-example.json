@@ -268,7 +268,7 @@
             {
               "name": "control-origination",
               "ns": "https://fedramp.gov/ns/oscal",
-              "value": "sp-system"
+              "value": "inherited"
             }
           ],
           "set-parameters": [
