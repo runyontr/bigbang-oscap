@@ -243,7 +243,7 @@
           ],
           "set-parameters": [
             {
-              "param-id": "a-5.2_prm_2",
+              "param-id": "ra-5.2_prm_2",
               "values": [
                 "when new vulnerabilities are identified and reported"
               ]
@@ -390,50 +390,15 @@
                   "description": "Twistlock installed on system."
                 }
               ]
-            }
-          ]
-        },
-        {
-          "uuid": "3EBBAB88-3247-44EE-8009-66DF265BEA00",
-          "control-id": "ra-5.2",
-          "props": [
-            {
-              "name": "planned-completion-date",
-              "ns": "https://fedramp.gov/ns/oscal",
-              "value": "2020-11-27Z"
             },
             {
-              "name": "implementation-status",
-              "ns": "https://fedramp.gov/ns/oscal",
-              "value": "planned",
-              "remarks": "Describe the plan to complete the implementation."
-            },
-            {
-              "name": "control-origination",
-              "ns": "https://fedramp.gov/ns/oscal",
-              "value": "sp-system"
-            }
-          ],
-          "statements": [
-            {
-              "statement-id": "ra-5.4",
-              "uuid": "94156C48-CB38-4D25-A5E4-94BAB4A440CD",
+              "statement-id": "ra-5.2_smt",
+              "uuid": "311CE854-8623-4A27-8E5E-00701A1DF16D",
               "by-components": [
                 {
                   "component-uuid": "E2376A1D-25C8-4247-8A8A-765A7D0515B4",
-                  "uuid": "B0C2D4FB-39E7-4D89-9811-C4CFAAF817B0",
-                  "description": "Twistlock installed on system."
-                }
-              ]
-            },
-            {
-              "statement-id": "ra-5.5",
-              "uuid": "CBF08BDD-0BBA-42CE-B10F-DCCB8C8A0DF9",
-              "by-components": [
-                {
-                  "component-uuid": "E2376A1D-25C8-4247-8A8A-765A7D0515B4",
-                  "uuid": "83F88B0A-664A-497D-BB9D-036ABABE258F",
-                  "description": "Twistlock installed on system."
+                  "uuid": "8C0BE9CD-76A0-47A1-BD3D-873BCF0B9C9F",
+                  "description": "Twistlock is installed on the system"
                 }
               ]
             }
