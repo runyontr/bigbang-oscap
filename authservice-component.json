@@ -198,6 +198,28 @@
           }
         ]
       }
-    ]
+    ],
+    "back-matter": {
+      "resources": [
+        {
+          "uuid": "97FF87A0-EB34-4001-839A-32FF0815D896",
+          "title": "Github Repo - Authservice",
+          "rlinks": [
+            {
+              "href": "https://github.com/istio-ecosystem/authservice"
+            }
+          ]
+        },
+        {
+          "uuid": "B66A99BD-680E-48AF-B81B-D2113155331E",
+          "title": "Big Bang Authservice package",
+          "rlinks": [
+            {
+              "href": "https://repo1.dso.mil/platform-one/big-bang/apps/core/authservice"
+            }
+          ]
+        }
+      ]
+    }
   }
 }

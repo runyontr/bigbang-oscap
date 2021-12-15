@@ -247,11 +247,20 @@
     "back-matter": {
       "resources": [
         {
-          "uuid": null,
+          "uuid": "E08E9771-EC99-4B0D-8E6D-C1785B52D818",
           "title": "Prisma Cloud Compute",
           "rlinks": [
             {
               "href": "https://www.paloaltonetworks.com/resources/datasheets/prisma-cloud-compute-edition-aag"
+            }
+          ]
+        },
+        {
+          "uuid": null,
+          "title": "Big Bang Prisma Cloud Compute package",
+          "rlinks": [
+            {
+              "href": "https://repo1.dso.mil/platform-one/big-bang/apps/security-tools/twistlock"
             }
           ]
         }
