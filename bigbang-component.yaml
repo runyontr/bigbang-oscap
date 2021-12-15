@@ -20,9 +20,13 @@ component-definition:
         rel: website
   components:
   - uuid: 9AD07B45-0254-445A-8D6F-1BB082558F15
+    type: software
+    title: Authservice
     import-component-definition:
       href: https://raw.githubusercontent.com/runyontr/bigbang-oscap/main/authservice-component.json
   - uuid: 147210A5-607D-4A88-A08A-C056B7CC27EA
+    type: software
+    title: PCC
     import-component-definition:
       href: https://raw.githubusercontent.com/runyontr/bigbang-oscap/main/prisma-component.json
   # - uuid: 850AC4DA-604C-48A2-94F6-C873BA8B4DEB
