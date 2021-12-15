@@ -1,0 +1,11 @@
+apiVersion: kpt.dev/v1alpha1
+kind: Kptfile
+metadata:
+  name: schema
+upstream:
+  type: git
+  git:
+    commit: cf9693ce4ecdef184ca3c857b030ce8582620275
+    repo: https://github.com/usnistgov/OSCAL
+    directory: json/schema
+    ref: main
